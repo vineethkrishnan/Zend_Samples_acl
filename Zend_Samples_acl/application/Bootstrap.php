@@ -8,11 +8,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
             'basePath' => APPLICATION_PATH
         ));
 
-//        $acl = new Application_Model_LibraryAcl();
-//        $auth = Zend_Auth::getInstance();
-//
-//        $front = Zend_Controller_Front::getInstance();
-//        $front->registerPlugin(new Application_Plugin_AccessCheck($acl, $auth));
+        $acl = new Application_Model_LibraryAcl();
+        $auth = Zend_Auth::getInstance();
+
+        $front = Zend_Controller_Front::getInstance();
+        $front->registerPlugin(new Application_Plugin_AccessCheck($acl, $auth));
 
         return $modelLoader;
     }
